@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lab1</groupId>
+    <artifactId>task3</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-RELEASE</version>
+
+    <modules>
+        <module>2</module>
+        <module>3</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.lab1</groupId>
+            <artifactId>task1</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.lab1</groupId>
+            <artifactId>task2</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+    </dependencies>
+
+    <!--FIXES the "Error of source value 1.5 is obsolete and will be removed in a future release" Upon Build  -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
